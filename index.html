@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MettVett</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <!-- Header -->
+    <header>
+      <h1>🛒 MettVett</h1>
+      <p>Finn oppskrifter basert på dagligvaretilbud nær deg!</p>
+    </header>
+
+    <!-- Hjemmeseksjon -->
+    <section id="home-section" style="display: block;">
+      <h2>Oppgi din adresse</h2>
+      <input type="text" id="address-input" placeholder="Skriv inn din adresse..." />
+      <button onclick="findDeals()" id="find-deals-button">Finn tilbud nær meg</button>
+      <p id="address-message" style="margin-top: 0.5rem; color: #888;"></p>
+      
+      <!-- Tilbudseksjon -->
+      <div id="offers-content" style="margin-top: 1rem;"></div>
+    </section>
+
+    <!-- Oppskriftseksjon -->
+    <section id="recipe-section" style="display: none;">
+      <h2>Oppskriftforslag</h2>
+      <div id="recipe-content">
+        <!-- Example of recipe cards -->
+        <div class="recipe-card tomato">
+          <h3>🍅 Tomatbasilikumpasta</h3>
+          <p>En enkel og smakfull rett med rabatterte tomater og basilikum!</p>
+        </div>
+        <div class="recipe-card pasta">
+          <h3>🍝 Kremet kyllingpasta</h3>
+          <p>En deilig pastarett laget med rabattert kylling og fløte.</p>
+        </div>
+        <div class="recipe-card dessert">
+          <h3>🍰 Sjokolademousse</h3>
+          <p>En lett dessert laget med ingredienser på tilbud.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Handleliste Seksjon -->
+    <section id="shopping-list-section" style="display: none;">
+      <h2>Handleliste</h2>
+      <p>Handlelisten din vil vises her.</p>
+    </section>
+
+    <!-- Varer Hjemme Seksjon -->
+    <section id="home-items-section" style="display: none;">
+      <h2>Varer hjemme</h2>
+      <p>Legg inn varer du har hjemme:</p>
+      <input type="text" id="home-item-input" placeholder="Skriv inn varenavn..." />
+      <button onclick="addHomeItem()">Legg til vare</button>
+      <ul id="home-items-list"></ul>
+    </section>
+
+    <!-- Bunnnavigering -->
+    <footer>
+      <button onclick="navigateTo('home')">🏠 Hjem</button>
+      <button onclick="navigateTo('recipes')">🍲 Oppskrifter</button>
+      <button onclick="navigateTo('shoppinglist')">📋 Handleliste</button>
+      <button onclick="navigateTo('homeItems')">🏡 Varer</button>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

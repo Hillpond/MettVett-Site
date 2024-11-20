@@ -1,0 +1,139 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f4e1; /* Soft beige background, food-inspired */
+  display: flex;
+  justify-content: center; /* Center the app horizontally */
+  align-items: flex-start; /* Align items at the top */
+  height: 100vh; /* Full viewport height */
+}
+
+#app {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff; /* White background for contrast */
+  border: 2px solid #d4b483; /* Soft brown border */
+  border-radius: 12px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  min-height: 100%;
+  padding-bottom: 60px; /* Space for the footer buttons */
+  position: relative;
+  margin-top: 0; /* Pushes the MettVett title box to the top */
+  padding-top: 1rem; /* Little padding at the top for title */
+}
+
+/* Header */
+header {
+  padding: 1.5rem;
+  background-color: #4caf50; /* Fresh green color */
+  color: #fff;
+  text-align: center;
+  border-radius: 12px 12px 0 0; /* Rounded top corners */
+}
+
+header h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  font-size: 1rem;
+  color: #f1f1f1; /* Light text color */
+}
+
+/* Input styles */
+header input[type="text"] {
+  width: 90%;
+  padding: 0.8rem;
+  margin-top: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Main content */
+section {
+  padding: 1rem;
+  flex: 1;
+  margin-bottom: 60px;
+  position: relative;
+}
+
+/* Footer (Bottom Navigation Buttons) */
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1rem;
+  background-color: #4caf50; /* Green footer */
+  box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 0 0 12px 12px; /* Rounded bottom corners */
+}
+
+footer button {
+  background-color: #f7d147; /* Yellowish background */
+  color: #4caf50; /* Green text color */
+  border: 2px solid #4caf50; /* Green border */
+  border-radius: 8px;
+  padding: 0.8rem 1.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  flex: 1;
+}
+
+footer button:hover {
+  background-color: #e7f5e0; /* Light green hover effect */
+}
+
+/* Recipe Card */
+.recipe-card {
+  background-color: #f9f4d6; /* Light cream color for recipe cards */
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #d4b483;
+}
+
+.recipe-card h3 {
+  font-size: 1.2rem;
+}
+
+.recipe-card p {
+  font-size: 1rem;
+  color: #444;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 500px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  header input[type="text"] {
+    width: 80%;
+  }
+
+  footer {
+    flex-direction: column;
+    padding: 0.5rem;
+  }
+
+  footer button {
+    margin-bottom: 1rem;
+  }
+}
